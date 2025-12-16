@@ -4,11 +4,12 @@ project(CMakeMenu)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Main menu executable
-add_executable(menu 
-    25-12-6.menu/menu.cpp
-    25-12-6.menu/menu_func.cpp
-    25-12-6.menu/menu_items.cpp
-)
+option(BUILD_TESTS "Build tests" ON)
 
-target_include_directories(menu PRIVATE 25-12-6.menu)
+if(BUILD_TESTS)
+	enable_testing()
+endif()
+
+# Include the menu app and the projects subtree
+add_subdirectory(25-12-6.menu)
+add_subdirectory(projects)
