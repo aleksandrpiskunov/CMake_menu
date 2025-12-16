@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(tests)
 
-# Expect googletest to be cloned into ../lib/googletest
 if(NOT TARGET gtest)
     add_subdirectory(${CMAKE_SOURCE_DIR}/projects/lib/googletest ${CMAKE_BINARY_DIR}/googletest_build)
 endif()

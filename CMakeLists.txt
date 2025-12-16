@@ -10,6 +10,5 @@ if(BUILD_TESTS)
 	enable_testing()
 endif()
 
-# Include the menu app and the projects subtree
 add_subdirectory(projects)
  
