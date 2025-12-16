@@ -1,7 +1,7 @@
 #pragma once
 
-#include <vector>
-
-namespace sortlib {
-    void bubble_sort(std::vector<int>& a);
+namespace pav {
+    namespace sortings {
+        void bubble_sort(int* arr, const int size);
+    }
 }

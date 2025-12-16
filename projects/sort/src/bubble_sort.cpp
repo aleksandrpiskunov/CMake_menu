@@ -1,23 +1,20 @@
 #include "bubble_sort.hpp"
 
-#include <algorithm>
+using namespace pav::sortings;
 
-namespace sortlib {
-
-void bubble_sort(std::vector<int>& a) {
-    if (a.empty()) return;
-    bool swapped = true;
-    size_t n = a.size();
-    while (swapped) {
-        swapped = false;
-        for (size_t i = 1; i < n; ++i) {
-            if (a[i-1] > a[i]) {
-                std::swap(a[i-1], a[i]);
-                swapped = true;
+void pav::sortings::bubble_sort(int* arr, const int size) {
+    bool is_swapped = false;
+    int i = 0;
+    do{
+        is_swapped = false;
+        for (int j = 0; j < size - i - 1; ++j) {
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j + 1];
+                arr[j + 1] = arr[j];
+                arr[j] = temp;
+                is_swapped = true;  
             }
         }
-        --n;
-    }
+        ++i;
+    } while (is_swapped);
 }
-
-} // namespace sortlib
