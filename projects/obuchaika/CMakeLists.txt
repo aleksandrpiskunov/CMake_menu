@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(menu_app)
+project(obuchaika)
 
 add_executable(menu
     menu.cpp

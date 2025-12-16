@@ -11,5 +11,5 @@ if(BUILD_TESTS)
 endif()
 
 # Include the menu app and the projects subtree
-add_subdirectory(25-12-6.menu)
 add_subdirectory(projects)
+ 
